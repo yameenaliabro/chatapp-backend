@@ -1,0 +1,5 @@
+export const signupQuery = "INSERT INTO users (username, email, password, retypepassword, description, skill,contactNumber,image,friend) VALUES ($1, $2, $3, $4, $5, $6, $7, $8,$9) RETURNING *"
+export const loginQuery = "SELECT * FROM users WHERE username = $1"
+export const getAllUsersQuery = "SELECT * FROM users"
+export const getUserByIdQuery = "SELECT * FROM users WHERE user_id = $1"
+export const deleteUserQuery = "DELETE FROM users WHERE user_id = $1"
